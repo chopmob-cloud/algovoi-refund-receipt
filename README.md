@@ -7,11 +7,11 @@
 
 AlgoVoi-authored reference implementation for the refund receipt format
 specified in IETF Internet-Draft
-[`draft-hopley-x402-refund-receipt-00`](https://datatracker.ietf.org/doc/draft-hopley-x402-refund-receipt/)
+[`draft-hopley-x402-refund-receipt`](https://datatracker.ietf.org/doc/draft-hopley-x402-refund-receipt/)
 (Independent Submission, Informational; AlgoVoi-authored).
 
 Companion to the compliance receipt format
-[`draft-hopley-x402-compliance-receipt-00`](https://datatracker.ietf.org/doc/draft-hopley-x402-compliance-receipt/).
+[`draft-hopley-x402-compliance-receipt`](https://datatracker.ietf.org/doc/draft-hopley-x402-compliance-receipt/).
 Where the compliance receipt records an admission-time screening
 decision, the refund receipt records a post-settlement
 reversal-of-funds event with the same canonicalisation discipline
@@ -103,7 +103,7 @@ canonicalisation.
 | `refund_result` | string (closed enum) | `FULL` / `PARTIAL` / `REJECTED`. Closed three-element enumeration; load-bearing under consumer-rights and PSD2 statutes. |
 | `refund_timestamp_ms` | integer | Epoch milliseconds. **Substrate Rule 2**: MUST be integer; RFC 3339 string forms rejected. |
 
-See [`draft-hopley-x402-refund-receipt-00`](https://datatracker.ietf.org/doc/draft-hopley-x402-refund-receipt/)
+See [`draft-hopley-x402-refund-receipt`](https://datatracker.ietf.org/doc/draft-hopley-x402-refund-receipt/)
 Section 3 for the full specification.
 
 ## Closed enumeration: `refund_result`
@@ -136,13 +136,13 @@ pins eight byte-level reference receipts + five pair invariants +
 three chain invariants.
 
 Any implementation claiming conformance with
-`draft-hopley-x402-refund-receipt-00` MUST reproduce all eight
+`draft-hopley-x402-refund-receipt` MUST reproduce all eight
 `expected_content_hash` values verbatim.
 
 ## Companion IETF Internet-Draft
 
 This library implements the format specified in
-[`draft-hopley-x402-refund-receipt-00`](https://datatracker.ietf.org/doc/draft-hopley-x402-refund-receipt/)
+[`draft-hopley-x402-refund-receipt`](https://datatracker.ietf.org/doc/draft-hopley-x402-refund-receipt/)
 (Independent Submission, Informational). The draft pins
 `urn:x402:canonicalisation:jcs-rfc8785-v1` (same canonicalisation
 discipline as the compliance receipt I-D) and specifies the seven-field
