@@ -158,6 +158,16 @@ auditability properties.
 | [`algovoi-rfc9421-verifier`](https://pypi.org/project/algovoi-rfc9421-verifier/) / [`@algovoi/rfc9421-verifier`](https://www.npmjs.com/package/@algovoi/rfc9421-verifier) | RFC 9421 + RFC 9530 HTTP message signature verifier |
 | **`algovoi-refund-receipt`** / `@algovoi/refund-receipt` | **This package.** Refund receipt format reference implementation |
 
+## Conformance to the canonicalisation discipline
+
+This package emits refund receipts pinned to `canon_version: jcs-rfc8785-v1` on every emitted receipt. The pin is in-band; downstream verifiers (including [`algovoi-audit-verifier`](https://pypi.org/project/algovoi-audit-verifier/) and any conformant third-party verifier) read the pin to select the canonicalisation rule applied at emission.
+
+The pin is the load-bearing primitive for the [Substrate Adopters Registry](https://docs.algovoi.co.uk/adopters): adopters anchoring to this discipline pin the same `canon_version` value in their own publicly-citable artefacts. AlgoVoi maintains the registry as a neutral observer; this package itself is recorded there as the AlgoVoi reference implementation.
+
+## Substrate adopters
+
+AlgoVoi is recorded in the [Substrate Adopters Registry](https://docs.algovoi.co.uk/adopters) as the substrate author (v1 and v2). Parties anchoring their own services or specifications to `canon_version: jcs-rfc8785-v1` are recorded in the registry via the [submission process](https://docs.algovoi.co.uk/adopters#how-to-submit-an-adoption-entry). AlgoVoi validates submissions against the artefact's canonical bytes and adds qualifying entries.
+
 ## Licence
 
 Apache 2.0. See [`LICENSE`](./LICENSE).
