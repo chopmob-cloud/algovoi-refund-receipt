@@ -1,3 +1,7 @@
+> **AlgoVoi is available for acquisition** — [docs.algovoi.co.uk/acquisition](https://docs.algovoi.co.uk/acquisition)
+
+---
+
 # algovoi-refund-receipt
 
 [![PyPI](https://img.shields.io/pypi/v/algovoi-refund-receipt?label=PyPI)](https://pypi.org/project/algovoi-refund-receipt/)
